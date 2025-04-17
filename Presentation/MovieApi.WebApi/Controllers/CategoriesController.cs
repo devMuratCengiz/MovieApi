@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MovieApi.Application.Features.CQRSDesignPattern.Commands.CategoryCommands;
 using MovieApi.Application.Features.CQRSDesignPattern.Handlers.CategoryHandlers;
+using MovieApi.Application.Features.CQRSDesignPattern.Queries.CategoryQueries;
 
 namespace MovieApi.WebApi.Controllers
 {
@@ -35,6 +36,28 @@ namespace MovieApi.WebApi.Controllers
         public async Task<IActionResult> CreateCategory(CreateCategoryCommand command)
         {
             await _createCategoryCommandHandler.Handle(command);
+            return Ok("Created");
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteCategory(int id)
+        {
+            await _removeCategoryCommandHandler.Handle(new RemoveCategoryCommand(id));
+            return Ok("Deleted");
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> UpdateCategory(UpdateCategoryCommand command)
+        {
+            await _updateCategoryCommandHandler.Handle(command);
+            return Ok("Updated");
+        }
+
+        [HttpGet("GetById")]
+        public async Task<IActionResult> GetCategory(int id)
+        {
+            var category = await _getCategoryByIdQueryHandler.Handle(new GetCategoryByIdQuery(id));
+            return Ok(category);
         }
     }
 }
