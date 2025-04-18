@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<!-- movielist07:38-->
+@await Component.InvokeAsync("_UserLayoutWebUIHead")
+<body>
+	<!--preloading-->
+	@await Component.InvokeAsync("_UserLayoutWebUIPreloader")
+	
+	<!--end of preloading-->
+	<!--login form popup-->
+	@await Component.InvokeAsync("_UserLayoutWebUILoginModal")
+	<!--end of login form popup-->
+	<!--signup form popup-->
+	@await Component.InvokeAsync("_UserLayoutWebUIRegisterModal")
+	<!--end of signup form popup-->
+	<!-- BEGIN | Header -->
+	@await Component.InvokeAsync("_UserLayoutWebUINavbar")
+	<!-- END | Header -->
+	@await Component.InvokeAsync("_UserLayoutWebUIHero")
+
+	@RenderBody()
+	<!-- footer section-->
+	@await Component.InvokeAsync("_UseLayoutWebUIFooter")
+	<!-- end of footer section-->
+	@await Component.InvokeAsync("_UserLayoutWebUIScript")
+</body>
+
+<!-- movielist07:38-->
+</html>

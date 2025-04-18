@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{197ECFA1-A5E0-4A7E-BC93-7DC94F2FBE55}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApi.WebApi", "Presentation\MovieApi.WebApi\MovieApi.WebApi.csproj", "{EAAC280C-E83C-48DE-A1B2-E551B6587069}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApi.Application", "Core\MovieApi.Application\MovieApi.Application.csproj", "{B83C5A59-3E8B-4F63-83F0-80F977957669}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApi.WebUI", "MovieApi.WebUI\MovieApi.WebUI.csproj", "{1400BAD9-5D7D-44AF-8119-0091B56B5C8D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{B83C5A59-3E8B-4F63-83F0-80F977957669}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B83C5A59-3E8B-4F63-83F0-80F977957669}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B83C5A59-3E8B-4F63-83F0-80F977957669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1400BAD9-5D7D-44AF-8119-0091B56B5C8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1400BAD9-5D7D-44AF-8119-0091B56B5C8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1400BAD9-5D7D-44AF-8119-0091B56B5C8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1400BAD9-5D7D-44AF-8119-0091B56B5C8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,5 +58,6 @@ Global
 		{256F954F-A1B4-4561-965B-9CE15B32052E} = {E7D0C4AF-B9A8-4DC2-B454-2A7D9EB68E30}
 		{EAAC280C-E83C-48DE-A1B2-E551B6587069} = {2FF7DCDE-679D-4E71-B496-9BF873FDB10C}
 		{B83C5A59-3E8B-4F63-83F0-80F977957669} = {197ECFA1-A5E0-4A7E-BC93-7DC94F2FBE55}
+		{1400BAD9-5D7D-44AF-8119-0091B56B5C8D} = {D51471D2-2F41-4E2E-A332-F8BE77996B2F}
 	EndGlobalSection
 EndGlobal
