@@ -27,6 +27,7 @@ namespace MovieApi.Application.Features.MediatorDesignPattern.Handlers.TagHandle
             return new GetTagByIdQueryResult
             {
                 Title = tag.Title,
+                Id = tag.Id
             };
         }
     }

@@ -18,37 +18,37 @@ namespace MovieApi.WebApi.Controllers
         }
 
         [HttpGet]
-        public IActionResult CastList()
+        public async Task<IActionResult> CastList()
         {
-            var casts = _mediator.Send(new GetCastQuery());
+            var casts = await _mediator.Send(new GetCastQuery());
             return Ok(casts);
         }
 
         [HttpPost]
-        public IActionResult CreateCast(CreateCastCommand command)
+        public async Task<IActionResult> CreateCast(CreateCastCommand command)
         {
-            _mediator.Send(command);
+            await _mediator.Send(command);
             return Ok("Created");
         }
 
         [HttpDelete]
-        public IActionResult DeleteCast(int id)
+        public async Task<IActionResult> DeleteCast(int id)
         {
-            _mediator.Send(new RemoveCastCommand(id));
+            await _mediator.Send(new RemoveCastCommand(id));
             return Ok("Deleted");
         }
 
         [HttpGet("GetById")]
-        public IActionResult GetCast(int id)
+        public async Task<IActionResult> GetCast(int id)
         {
-            var cast = _mediator.Send(new GetCastByIdQuery(id));
+            var cast = await _mediator.Send(new GetCastByIdQuery(id));
             return Ok(cast);
         }
 
         [HttpPut]
-        public IActionResult UpdateCast(UpdateCastCommand command)
+        public async Task<IActionResult> UpdateCast(UpdateCastCommand command)
         {
-            _mediator.Send(command);
+            await _mediator.Send(command);
             return Ok("Updated");
         }
     }
