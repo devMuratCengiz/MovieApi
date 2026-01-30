@@ -1,7 +1,14 @@
 <Solution>
-  <Folder Name="/Core/" />
+  <Folder Name="/Core/">
+    <Project Path="Core/MoviApi.Application/MoviApi.Application.csproj" Id="ec223ba8-0ed2-4591-93b8-cac91931e86d" />
+    <Project Path="Core/MovieApi.Domain/MovieApi.Domain.csproj" />
+  </Folder>
   <Folder Name="/Frontends/" />
-  <Folder Name="/Infrastructure/" />
-  <Folder Name="/Presentation/" />
+  <Folder Name="/Infrastructure/">
+    <Project Path="Infrastructure/MovieApi.Persistence/MovieApi.Persistence.csproj" Id="88c5dd3e-cd67-4a94-9d39-f1443c7e9aea" />
+  </Folder>
+  <Folder Name="/Presentation/">
+    <Project Path="Presentation/MovieApi.WebApi/MovieApi.WebApi.csproj" Id="c4852686-d57e-4989-8c41-15f4c9902006" />
+  </Folder>
   <Folder Name="/Reqs/" />
 </Solution>

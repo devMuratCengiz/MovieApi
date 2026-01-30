@@ -1,0 +1,12 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace MoviApi.Application.Features.CQRS.Results.CategoryResults
+{
+    public class GetCategoryByIdQueryResult
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
+}
