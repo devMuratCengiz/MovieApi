@@ -8,7 +8,7 @@ namespace MoviApi.Application.Features.CQRS.Handlers.MovieHandlers
 {
     public class CreateMovieCommandHandler(MovieContext _context)
     {
-        public async void Handle(CreateMovieCommand command)
+        public async Task Handle(CreateMovieCommand command)
         {
             _context.Movies.Add(new()
             {

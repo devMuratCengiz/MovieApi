@@ -8,7 +8,7 @@ namespace MoviApi.Application.Features.CQRS.Handlers.CategoryHandlers
 {
     public class UpdateCategoryCommandHandler(MovieContext _context)
     {
-        public async void Handle(UpdateCategoryCommand command)
+        public async Task Handle(UpdateCategoryCommand command)
         {
             var value = await _context.Categories.FindAsync(command.Id);
             value.Name = command.Name;

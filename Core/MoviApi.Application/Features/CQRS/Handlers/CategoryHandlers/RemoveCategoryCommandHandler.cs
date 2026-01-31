@@ -8,7 +8,7 @@ namespace MoviApi.Application.Features.CQRS.Handlers.CategoryHandlers
 {
     public class RemoveCategoryCommandHandler(MovieContext _context)
     {
-        public async void Handle(RemoveCategoryCommand command)
+        public async Task Handle(RemoveCategoryCommand command)
         {
             var value = await _context.Categories.FindAsync(command.Id);
             _context.Categories.Remove(value);

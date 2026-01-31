@@ -8,7 +8,7 @@ namespace MoviApi.Application.Features.CQRS.Handlers.MovieHandlers
 {
     public class UpdateMovieCommandHandler(MovieContext _context)
     {
-        public async void Handle(UpdateMovieCommand command)
+        public async Task Handle(UpdateMovieCommand command)
         {
             var value = await _context.Movies.FindAsync(command.Id);
             value.Rating = command.Rating;
