@@ -3,7 +3,10 @@
     <Project Path="Core/MoviApi.Application/MoviApi.Application.csproj" Id="ec223ba8-0ed2-4591-93b8-cac91931e86d" />
     <Project Path="Core/MovieApi.Domain/MovieApi.Domain.csproj" />
   </Folder>
-  <Folder Name="/Frontends/" />
+  <Folder Name="/Frontends/">
+    <Project Path="Frontends/MovieApi.Dto/MovieApi.Dto.csproj" Id="c3bd4076-33b2-49a1-976d-5dc1fc1fd98f" />
+    <Project Path="Frontends/MovieApi.WebUI/MovieApi.WebUI.csproj" Id="07708ce2-093f-4942-804e-d8ccb9a775db" />
+  </Folder>
   <Folder Name="/Infrastructure/">
     <Project Path="Infrastructure/MovieApi.Persistence/MovieApi.Persistence.csproj" Id="88c5dd3e-cd67-4a94-9d39-f1443c7e9aea" />
   </Folder>

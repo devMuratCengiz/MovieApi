@@ -1,0 +1,135 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Cinematic Login Variant 1</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ea2a33",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#211111",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Spline Sans", sans-serif
+            }
+        .glass-card {
+            background: rgba(33, 17, 17, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1)
+            }
+        .grain-overlay {
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAoN3SKTzpN1ed-baEULvAvTP6Ex2eIdopcmW-dfIiIYfKMBnqvSx1w2vjppCR6Ny1CsEM7nDfBDhtPUdH4TuUS9jlJs1Gar0-TKwPPx4rL0x6RBpvGwBAq5L0Cvo0g5CMANTX7b_e9WoENa107M7ZX6RnCnp37ViKLqjcMaqW3wjWEcPcGbqcwprU-ckAM0qyYcoCHVcV5URbPnir9x2T5HJ3sL7qpO1qeAQd1S-ovEzpYnMWvPVHX_kkJqAxzXC_DsvfSdfKh1mI);
+            opacity: 0.05;
+            pointer-events: none
+            }</style>
+    <style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white overflow-hidden">
+    <!-- Cinematic Background -->
+    <div class="fixed inset-0 w-full h-full z-0 overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center scale-110 blur-2xl opacity-40" data-alt="Blurred collage of cinematic movie posters and scenes" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBjYSsbEDEQPpMLUgVIT2_S8PsbhVOYi02ndTzdlEZRS7PZKBhb0_5CKzqDusXhKr1l_NmGl6zjBb1fNd9Iwo86lSMuoZrGsGDTpHfGzDAHGR3-AowPF73wUmfT2aYWmbR7B6NLF9wiEAEkH60ThxDuscEehmZcnju7VCqQLc3rFzXnwNHoMFIGDU-DIRLiqs-p_ukjZxaPXU4jHIGMbCoKXfUsMQ2M_XMfb7TPCtGX76eBfEBLGereZtka1P4AvjjRUWQRDLY6OMY');">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-background-dark/80 via-background-dark to-background-dark"></div>
+        <div class="absolute inset-0 grain-overlay"></div>
+    </div>
+    <!-- Main Content Container -->
+    <main class="relative z-10 flex min-h-screen flex-col items-center justify-center p-6 @@container">
+        <!-- Header Section -->
+        <div class="mb-10 flex flex-col items-center">
+            <div class="bg-primary/20 p-4 rounded-full mb-6">
+                <span class="material-symbols-outlined text-primary text-5xl">movie_filter</span>
+            </div>
+            <h1 class="text-3xl font-bold tracking-tight text-white text-center">Welcome Back</h1>
+            <p class="text-white/60 text-base font-normal mt-2 text-center">Sign in to explore movies and TV series</p>
+        </div>
+        <!-- Glassmorphism Card -->
+        <div class="w-full max-w-md glass-card rounded-xl p-8 shadow-2xl">
+            <form class="space-y-6">
+                <!-- Email Input -->
+                <div class="space-y-2">
+                    <label class="block text-sm font-medium text-white/80 ml-1">Email address</label>
+                    <div class="relative group">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-white/40 group-focus-within:text-primary transition-colors">
+                            <span class="material-symbols-outlined text-[20px]">mail</span>
+                        </div>
+                        <input class="w-full bg-white/5 border border-white/10 rounded-lg py-4 pl-12 pr-4 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-base" placeholder="name@example.com" type="email" value="" />
+                    </div>
+                </div>
+                <!-- Password Input -->
+                <div class="space-y-2">
+                    <label class="block text-sm font-medium text-white/80 ml-1">Password</label>
+                    <div class="relative group">
+                        <div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-white/40 group-focus-within:text-primary transition-colors">
+                            <span class="material-symbols-outlined text-[20px]">lock</span>
+                        </div>
+                        <input class="w-full bg-white/5 border border-white/10 rounded-lg py-4 pl-12 pr-12 text-white placeholder:text-white/30 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all text-base" placeholder="••••••••" type="password" value="" />
+                        <div class="absolute inset-y-0 right-0 flex items-center pr-4 cursor-pointer text-white/40 hover:text-white">
+                            <span class="material-symbols-outlined text-[20px]">visibility</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Remember Me & Forgot Password -->
+                <div class="flex items-center justify-between">
+                    <label class="flex items-center space-x-2 cursor-pointer group">
+                        <div class="relative flex items-center">
+                            <input class="peer h-5 w-5 appearance-none rounded border border-white/20 bg-white/5 checked:bg-primary checked:border-primary focus:ring-0 focus:ring-offset-0 transition-all" type="checkbox" />
+                            <span class="material-symbols-outlined absolute text-[16px] text-white opacity-0 peer-checked:opacity-100 left-[2px]">check</span>
+                        </div>
+                        <span class="text-sm text-white/60 group-hover:text-white/80 transition-colors">Remember me</span>
+                    </label>
+                    <a class="text-sm font-medium text-primary hover:text-primary/80 transition-colors" href="#">Forgot password?</a>
+                </div>
+                <!-- Login Button -->
+                <button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg shadow-lg shadow-primary/20 transform active:scale-[0.98] transition-all flex items-center justify-center gap-2" type="submit">
+                    <span>Login</span>
+                    <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+                </button>
+            </form>
+        </div>
+        <!-- Footer -->
+        <div class="mt-auto pt-8 pb-4">
+            <p class="text-white/60 text-sm">
+                Don't have an account?
+                <a class="text-primary font-bold hover:underline ml-1" href="#">Sign up</a>
+            </p>
+        </div>
+        <!-- Safe Area Spacer for iOS -->
+        <div class="h-6"></div>
+    </main>
+</body>
+</html>
